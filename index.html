@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeWork#33</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1>INTERNET-SHOP</h1>
+    </header>
+    <div class="wrapper">
+        <aside class="left-sidebar" id="left-sidebar">
+            <div id="categories-section">
+                <h2>
+                    Categories:
+                </h2>
+                <ul class="categories">
+                    <li class="category">
+                        Fruits
+                    </li>
+                    <li class="category">
+                        Vegetables
+                    </li>
+                    <li class="category">
+                        Berries
+                    </li>
+                    <li class="category">
+                        Drinks
+                    </li>
+                </ul>
+                <button class=orders" id="orders-button" type="button">
+                    My order
+                </button>
+            </div>
+            <div id="shopping-cart-section" style="display: none;"></div>
+        </aside>
+        <div class="main-content">
+            <div id="products-section">
+                <h2>
+                    Goods in category
+                </h2>
+                <ul class="product-list"></ul>
+            </div>
+        </div>
+        <aside class="right-sidebar">
+            <div id="product-info">
+                <h2>
+                    Information about this:
+                </h2>
+                <p id="product-details">
+
+                </p>
+                <button id="buy-button">
+                    Buy
+                </button>
+                <form class="order-form" id="order-form">
+                    <h4 class="form-header">
+                        Please, make your order:
+                    </h4>
+                    <label for="full-name" class="form-item">
+                        Full name
+                    </label>
+                    <input type="text" id="full-name" name="fullName" required>
+                    <label for="city" class="form-item">
+                        Choose city:
+                    </label>
+                    <select name="city" id="city" required>
+                        <option value="Kyiv">
+                            Kyiv
+                        </option>
+                        <option value="Lviv">
+                            Lviv
+                        </option>
+                        <option value="Odesa">
+                            Odesa
+                        </option>
+                        <option value="Dnipro">
+                            Dnipro
+                        </option>
+                    </select>
+                    <label for="delivery-branch" class="form-item">
+                        Branch post:
+                    </label>
+                    <input type="number" id="delivery-branch" name="deliveryBranch" min="1" required>
+                    <label class="form-item">
+                        Choose the system of payment
+                    </label>
+                    <input type="radio" id="cash-on-delivery" name="paymentMethod" value="After payment" required>
+                    <label for="cash-on-delivery">
+                        After payment
+                    </label>
+                    <input type="radio" id="card-payment" name="paymentMethod" value="Card payment" required>
+                    <label for="card-payment">
+                        Card payment
+                    </label>
+                    <label for="quantity" class="form-item">
+                        Count of products
+                    </label>
+                    <input type="number" id="quantity" name="quantity" min="1" required>
+                    <label for="comment" class="form-item">
+                        Comment
+                    </label>
+                    <textarea name="comment" id="comment" placeholder="Super!">
+                        Super
+                    </textarea>
+                    <button type="submit" id="form-submit">
+                        Confirm
+                    </button>
+                </form>
+            </div>
+        </aside>
+    </div>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
