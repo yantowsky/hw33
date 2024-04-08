@@ -1,43 +1,214 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa&display=swap");
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  font-family: "Comfortaa", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .header {
-  background-color: #444;
+  background-color: black;
   color: #fff;
   text-align: center;
   padding: 10px;
 }
 
 .wrapper {
-  flex: 1;
+  overflow: hidden;
   display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+@media (min-width: 1024px) {
+  .wrapper {
+    flex-direction: row;
+  }
 }
 
 .left-sidebar {
-  flex: 0 0 33%;
-  background-color: #a2a2a2;
-  border: 1px solid #ccc;
+  background-color: silver;
+  border: 1px solid #000;
   text-align: center;
+}
+@media (min-width: 1024px) {
+  .left-sidebar {
+    flex: 0 0 33%;
+    flex-direction: row;
+  }
 }
 
 .main-content {
   width: 100%;
-  flex: 1;
   background-color: #eee;
-  border: 1px solid #ccc;
+  border: 1px solid #000;
   text-align: center;
+}
+@media (min-width: 1024px) {
+  .main-content {
+    flex: 1;
+    flex-direction: row;
+  }
 }
 
 .right-sidebar {
   flex: 0 0 33%;
-  background-color: #a2a2a2;
-  border: 1px solid #ccc;
+  background-color: silver;
+  border: 1px solid #000;
   text-align: center;
+}
+@media (min-width: 1024px) {
+  .right-sidebar {
+    flex: 0 0 33%;
+    flex-direction: row;
+  }
 }
 
 #shopping-cart-title {
@@ -53,20 +224,88 @@ ul {
 li {
   cursor: pointer;
   list-style: none;
-  padding: 5px 0;
+  padding: 7px 0;
+  transition: 0.8s;
+}
+
+li:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+.orders-list__item {
+  font-size: 0.85rem;
+}
+@media (min-width: 1280px) {
+  .orders-list__item {
+    font-size: 1rem;
+  }
 }
 
 button {
+  width: 30%;
   cursor: pointer;
-  margin-top: 10px;
+  margin: 10px 0;
+  background-color: darkgrey;
+}
+
+button:hover {
+  background-color: lightgrey;
+}
+
+h1 {
+  padding: 10px 0;
+  font-size: 2rem;
+  font-weight: 700;
 }
 
 h2 {
+  padding: 10px 0;
   text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+p {
+  padding: 7px 0;
 }
 
 span {
   font-weight: 700;
+}
+
+input,
+select,
+textarea,
+button {
+  padding: 7px 5px;
+  text-align: center;
+  font-family: "Comfortaa", sans-serif;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 2px solid #000;
+}
+
+#full-name {
+  width: 60%;
+}
+
+#city {
+  width: 50%;
+}
+
+#delivery-branch {
+  width: 40%;
+}
+
+#quantity {
+  width: 25%;
+}
+
+#cash-on-delivery,
+#card-payment {
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 #products-section,
@@ -82,14 +321,17 @@ span {
 
 .form-item {
   display: block;
-  margin: 20px auto 0;
+  margin: 20px auto 5px;
+  font-weight: 700;
 }
 
 .form-header {
   margin: 0;
 }
 
-textarea {
+#comment {
+  width: 60%;
+  height: 100px;
   display: block;
   margin: 0 auto;
 }/*# sourceMappingURL=style.css.map */

@@ -61,7 +61,7 @@ Array.from(categoryList).forEach((element) => {
 productList.addEventListener('click', (event) => {
     const product = event.target.textContent;
     productDetails.style.display = 'block';
-    productDetails.textContent = 'You choose: ' + product.toLowerCase();
+    productDetails.textContent = `You choose: ${product.toLowerCase()}`;
     orderForm.style.display = 'none';
     productsInfo.style.display = 'block';
     orderForm.reset();
