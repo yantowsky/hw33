@@ -19,7 +19,7 @@ body {
 }
 
 .left-sidebar {
-  flex: 0 0 300px;
+  flex: 0 0 33%;
   background-color: #a2a2a2;
   border: 1px solid #ccc;
   text-align: center;
@@ -34,13 +34,13 @@ body {
 }
 
 .right-sidebar {
-  flex: 0 0 300px;
+  flex: 0 0 33%;
   background-color: #a2a2a2;
   border: 1px solid #ccc;
   text-align: center;
 }
 
-.shopping-cart-title {
+#shopping-cart-title {
   display: none;
 }
 
@@ -65,8 +65,19 @@ h2 {
   text-align: center;
 }
 
+span {
+  font-weight: 700;
+}
+
+#products-section,
+#products-info,
+#order-details {
+  display: none;
+}
+
 .order-form {
-  margin: 20px0 0 0;
+  display: none;
+  margin: 20px 0 0 0;
 }
 
 .form-item {
